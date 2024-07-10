@@ -1,8 +1,8 @@
 var notified_dead_neuron = false;
 
 function draw_neural_network(id) {
-    canvas = document.getElementById(id);
-    ctx = canvas.getContext('2d');
+    let canvas = document.getElementById(id);
+    let ctx = canvas.getContext('2d');
 
     //Input
     ctx.beginPath();
@@ -71,4 +71,21 @@ function relu_der(x) {
         }
         return 0;
     }
+}
+
+function run_test_nn() {
+    let input = document.getElementById("feature");
+    let output = document.getElementById("label");
+    let w1 = document.getElementById("weight_1");
+    let b1 = document.getElementById("bias_1");
+    let a1 = document.getElementById("act_1");
+    let w2 = document.getElementById("weight_2");
+    let b2 = document.getElementById("bias_2");
+    let a2 = document.getElementById("act_2");
+    let w3 = document.getElementById("weight_3");
+    let b3 = document.getElementById("bias_3");
+    let a3 = document.getElementById("act_3");
+    let epochs = document.getElementById("epochs");
+
+    
 }
