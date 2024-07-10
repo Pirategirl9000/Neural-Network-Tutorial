@@ -1,5 +1,5 @@
-function draw_neural_network() {
-    canvas = document.getElementById("nn");
+function draw_neural_network(id) {
+    canvas = document.getElementById(id);
     ctx = canvas.getContext('2d');
 
     //Input
