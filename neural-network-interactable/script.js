@@ -12,4 +12,8 @@ function run() {
     let a3 = document.getElementById("act_3").innerHTML;
     let epochs = document.getElementById("epochs").innerHTML;
     let learning_rate = document.getElementById("learning_rate").innerHTML;
+
+    let display = document.getElementById("display")
+
+    display.innerHTML = w1
 }
