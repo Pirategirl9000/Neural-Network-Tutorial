@@ -66,7 +66,7 @@ function relu_der(x) {
         return 1;
     } else {
         if (!notified_dead_neuron) {
-            alert("The ReLU derivative is equal to 0 meaning the error gradient is 0. This means the neuron is dead due to being unable to update weights and biases making the model die");
+            alert("The ReLU derivative is equal to 0 meaning the error gradient is 0. This means the neuron is dead and will be unable to update weights and biases");
             notified_dead_neuron = true;
         }
         return 0;
