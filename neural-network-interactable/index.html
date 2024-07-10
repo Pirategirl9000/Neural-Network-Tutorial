@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <title>My Neural Network</title>
+
+    <body>
+        <table>
+            <tr>
+                <th>Weight</th>
+                <th>Bias</th>
+                <th>Activation Function</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input id = "weight_1" type="number" value="1">
+                </td>
+                <td>
+                    <input id = "bias_1" type="number" value="1">
+                </td>
+                <td>
+                    <select id="act_1">
+                        <option>Sigmoid</option>
+                        <option>ReLU</option>
+                        <option>tanh</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input id = "weight_2" type="number" value="1">
+                </td>
+                <td>
+                    <input id = "bias_2" type="number" value="1">
+                </td>
+                <td>
+                    <select id="act_2">
+                        <option>Sigmoid</option>
+                        <option>ReLU</option>
+                        <option>tanh</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input id = "weight_3" type="number" value="1">
+                </td>
+                <td>
+                    <input id = "bias_3" type="number" value="1">
+                </td>
+                <td>
+                    <select id="act_3">
+                        <option>Sigmoid</option>
+                        <option>ReLU</option>
+                        <option>tanh</option>
+                    </select>
+                </td>
+            </tr>
+            <!--END OF WEIGHTS AND BIASES-->
+            <tr>
+                <th>Epochs</th>
+                <th>Learning Rate</th>
+            </tr>
+            <tr>
+                <td>
+                    <input id="epochs" type="number" value="100">
+                </td>
+
+                <td>
+                    <input id="learning_rate" type="number" value="0.01">
+                </td>
+
+                <td>
+                    <button>Start</button>
+                </td>
+
+
+            </tr>
+        </table>
+
+        <p id="display"></p>
+    </body>
+</html>
