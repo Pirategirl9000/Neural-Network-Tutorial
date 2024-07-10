@@ -32,4 +32,9 @@ function draw_neural_network() {
     ctx.stroke();
     ctx.closePath();
 
+    //Draw Text
+    ctx.fillText("Input Layer", 50, 20);
+    ctx.fillText("Hidden Layer 1", 210, 20);
+    ctx.fillText("Hidden Layer n", 370, 20);
+    ctx.fillText("Output Layer", 535, 20);
 }
