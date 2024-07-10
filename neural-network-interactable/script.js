@@ -1,4 +1,4 @@
-function run_test_nn() {
+function run() {
     let input = document.getElementById("feature").innerHTML;
     let output = document.getElementById("label").innerHTML;
     let w1 = document.getElementById("weight_1").innerHTML;

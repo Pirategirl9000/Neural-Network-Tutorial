@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <title>My Neural Network</title>
+    <head>
+       <title>My Neural Network</title>
+       <script src="script.js"></script>
+    </head>
 
-    <body>
+    <body style="background:rgb(91, 89, 89)">
         <table>
+            <tr>
+                <th>Input</th>
+                <th>Desired Output</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="number", value = "6">
+                </td>
+                <td>
+                    <input type="number" value = "13">
+                </td>
+            </tr>
+
+
+
             <tr>
                 <th>Weight</th>
                 <th>Bias</th>
@@ -57,7 +76,9 @@
                     </select>
                 </td>
             </tr>
+
             <!--END OF WEIGHTS AND BIASES-->
+
             <tr>
                 <th>Epochs</th>
                 <th>Learning Rate</th>
@@ -72,13 +93,11 @@
                 </td>
 
                 <td>
-                    <button>Start</button>
+                    <button onclick="run()">Start</button>
                 </td>
-
-
             </tr>
         </table>
 
-        <p id="display"></p>
+        <p id="display" style="border: 1px solid black">Your output will appear here</p>
     </body>
 </html>
