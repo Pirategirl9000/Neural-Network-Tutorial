@@ -1,4 +1,4 @@
-notified_dead_neuron = false;
+var notified_dead_neuron = false;
 
 function draw_neural_network(id) {
     canvas = document.getElementById(id);
