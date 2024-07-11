@@ -1,4 +1,6 @@
-var notified_dead_neuron = false;
+function initialize() {
+    document.getElementById("redirect_nn_widget").addEventListener("click", redirect);
+}
 
 function draw_neural_network(id) {
     let canvas = document.getElementById(id);
@@ -39,4 +41,8 @@ function draw_neural_network(id) {
     ctx.fillText("Hidden Layer 1", 210, 20);
     ctx.fillText("Hidden Layer n", 370, 20);
     ctx.fillText("Output Layer", 535, 20);
+}
+
+function redirect() {
+    window.location = "/neural-network-interactable";
 }

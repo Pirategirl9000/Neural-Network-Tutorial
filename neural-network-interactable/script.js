@@ -16,6 +16,7 @@ var epochs;
 var learning_rate;
 var display;
 var display_text = "";
+var notified_dead_neuron = false;
 
 function initialize() {
     display = document.getElementById("display");
