@@ -1,4 +1,3 @@
-/* https://karthiknedunchezhiyan.com/google-chrome-dino/ */
 const display = document.querySelector("canvas");
 const ctx = display.getContext("2d");
 var currentFrame = 0;
