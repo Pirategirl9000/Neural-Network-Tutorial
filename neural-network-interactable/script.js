@@ -15,6 +15,7 @@ var d3;
 var epochs;
 var learning_rate;
 var display;
+var display_text = "";
 
 function initialize() {
     display = document.getElementById("display");
@@ -83,6 +84,13 @@ function run_nn() {
     a3 = references_3[0];
     d3 = references_3[1];
 
+
+    for (i = 1; i <= epochs; i++) {
+        forward_propagation(i);
+    }
+
+    display.innerHTML = display_text;
+
 }
 
 function get_activation_reference(input) {
@@ -101,4 +109,34 @@ function get_activation_reference(input) {
     }
 
     return [activation, derivative];
+}
+
+function forward_propagation(i) {
+    let x2 = a1((input*w1) + b1);
+    let x3 = a2((x2*w2) + b2);
+    let prediction = a3((x3*w3) + b3);
+
+    let loss = output-prediction;
+
+    display_text = display_text.concat(`Iteration ${i}: Prediction = ${prediction}, Loss = ${loss}\n`);
+
+    backward_propagation(x2, x3, loss);
+}
+
+function backward_propagation(x2, x3, loss) {
+    let dw3 = loss * d3(x3) * x3 * learning_rate;
+    let dw2 = dw3 * d2(x2) * x2 * learning_rate;
+    let dw1 = dw2 * d1(input) * input * learning_rate;
+
+    let db3 = loss * d3(x3) * learning_rate;
+    let db2 = db3 * d2(x2) * learning_rate;
+    let db1 = db2 * d1(input) * learning_rate;
+
+    w1 += dw1;
+    w2 += dw2;
+    w3 += dw3;
+
+    b1 += db1;
+    b2 += db2;
+    b3 += db3;
 }
