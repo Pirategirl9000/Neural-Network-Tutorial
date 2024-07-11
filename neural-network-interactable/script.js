@@ -91,6 +91,8 @@ function run_nn() {
 
     display.innerHTML = display_text;
 
+    display_text = "";
+
 }
 
 function get_activation_reference(input) {
@@ -118,7 +120,7 @@ function forward_propagation(i) {
 
     let loss = output-prediction;
 
-    display_text = display_text.concat(`Iteration ${i}: Prediction = ${prediction}, Loss = ${loss}\n`);
+    display_text = display_text.concat(`Iteration ${i}: Prediction = ${prediction}, Loss = ${loss}<br>`);
 
     backward_propagation(x2, x3, loss);
 }
