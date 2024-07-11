@@ -1,5 +1,6 @@
 function initialize() {
     document.getElementById("redirect_nn_widget").addEventListener("click", redirect_nn_widget);
+    document.getElementById("redirect_dino_game_ai").addEventListener("click", redirect_dino_game_ai);
 }
 
 function draw_neural_network(id) {
@@ -47,6 +48,6 @@ function redirect_nn_widget() {
     window.location = "/neural-network-interactable";
 }
 
-function redirect_chrome_dino_game_ai() {
+function redirect_dino_game_ai() {
     window.location = "/dino-game-ai";
 }
