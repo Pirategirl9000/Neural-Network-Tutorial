@@ -14,10 +14,10 @@
 
             <tr>
                 <td>
-                    <input type="number", value = "6">
+                    <input id="feature" type="number" value = "6">
                 </td>
                 <td>
-                    <input type="number" value = "13">
+                    <input id="label" type="number" value = "13">
                 </td>
             </tr>
 
@@ -93,11 +93,13 @@
                 </td>
 
                 <td>
-                    <button onclick="run()">Start</button>
+                    <button id="start_button">Start</button>
                 </td>
             </tr>
         </table>
 
         <p id="display" style="border: 1px solid black">Your output will appear here</p>
+
+        <script>initialize();</script>
     </body>
 </html>

@@ -40,35 +40,3 @@ function draw_neural_network(id) {
     ctx.fillText("Hidden Layer n", 370, 20);
     ctx.fillText("Output Layer", 535, 20);
 }
-
-function sigmoid(x) {
-    return 1/(1+Math.exp(-x));
-}
-
-function sigmoid_der(x) {
-    return sigmoid(x)*(1-sigmoid(x));
-}
-
-function tanh(x) {
-    return Math.tanh(x);
-}
-
-function tanh_der(x) {
-    return 1 - (tanh(x) * tanh(x));
-}
-
-function relu(x) {
-    return Math.max(0, x);
-}
-
-function relu_der(x) {
-    if (x > 0) {
-        return 1;
-    } else {
-        if (!notified_dead_neuron) {
-            alert("The ReLU derivative is equal to 0 meaning the error gradient is 0. This means the neuron is dead and will be unable to update weights and biases");
-            notified_dead_neuron = true;
-        }
-        return 0;
-    }
-}
