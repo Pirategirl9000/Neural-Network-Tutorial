@@ -1,11 +1,12 @@
 html {
   height: 100%;
   width: 100%;
-  background: grey;
+  background: white;
 }
 
 canvas {
   height: 500px;
   width: 1200px;
   background: white;
+  border: 5px solid black;
 }

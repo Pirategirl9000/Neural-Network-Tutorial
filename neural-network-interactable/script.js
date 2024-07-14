@@ -21,6 +21,9 @@ var notified_dead_neuron = false;
 function initialize() {
     display = document.getElementById("display");
     document.getElementById("start_button").addEventListener("click", run_nn);
+    document.getElementById("view_code").addEventListener("click", () => {
+        window.location = "/neural-network-interactable/script.js";
+    })
 }
 
 function sigmoid(x) {

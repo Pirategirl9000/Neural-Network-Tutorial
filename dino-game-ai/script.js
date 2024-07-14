@@ -1,3 +1,9 @@
+document.getElementById("view_code").addEventListener("click", () => {
+  window.location = "/dino-game-ai/script.js";
+})
+
+
+//GAME CODE
 const display = document.querySelector("canvas");
 const ctx = display.getContext("2d");
 var currentFrame = 0;
