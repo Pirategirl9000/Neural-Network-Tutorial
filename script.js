@@ -51,17 +51,3 @@ function redirect_nn_widget() {
 function redirect_dino_game_ai() {
     window.location = "/dino-game-ai";
 }
-
-function draw_graph(formula, width, height, graphid) {
-    let ctx = document.getElementById(graphid).getContext('2d')
-    x_values = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
-    y_values = [];
-    let x;
-
-    for (let i = 0; i < x_values.length; i++) {
-        x = x_values[i];
-        y_values.push(eval(formula));
-    }
-
-
-}
