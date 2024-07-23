@@ -358,7 +358,44 @@
                     </li>
 
                     <li>
+                        <h4>Adjustments</h4>
+                        <p>
+                            Now that we have calculated the dw's(derivatives with respect to weight) and db's(derivatives with respect to bias) we now simply
+                            apply these new changes. Often times these changes are dramatic though and can cause problems. This is where a small tweak comes in handy:
+                            learning rates. A learning rate is just a number less than 1 that is used to reduce how much each weight or bias changes. These can be 
+                            whatever the programmer likes but typically a good rate is around 0.01 meaning only 1/100 of the change actually is applied.
+                        </p>
+
+                        <p>
+                            Below will be the equations for updating weights and biases with a learning rate of 0.01
+                        </p>
+
+                        <p>w1 = w1 + dw1 * 0.01</p>
+                        <p>w2 = w2 + dw2 * 0.01</p>
+                        <p>w3 = w3 + dw3 * 0.01</p>
+                        <br>
+                        <p>b1 = b1 + db1 * 0.01</p>
+                        <p>b2 = b2 + db2 * 0.01</p>
+                        <p>b3 = b3 + db3 * 0.01</p>
+                    </li>
+
+                    <li>
+                        <h4>Epochs</h4>
                         
+                        <p>
+                            Now that we updated our weights and biases all that's left is to redo everything again. This is the concept of epochs.
+                            Epochs represent how many times we redo the process of forward and backward propagtion. This is how our neural networks learn
+                            and train. By looking over the data several times they begin to find patterns through trial and error. By the end of the epochs
+                            we should have a trained model that can make accurate predictions. They are always prone to being incorrect due to the complexity
+                            of predictions but still have a place in modern data science.
+                        </p>
+
+                        <p>
+                            When picking a number of epochs there is always a sweet spot. Usually you want to pick enough epochs that your predictions will
+                            be accurate but not too many that the model will memorize patterns in only the training data(overfeeding). When a model is exposed
+                            to the same data too many times it will then make a perfect algorithm for predicting results within its training data but will be useless
+                            when exposed to new data. This is why programmers must mess around with epochs to see what works best.
+                        </p>
                     </li>
                 </ol>
             </li>
