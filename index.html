@@ -289,6 +289,67 @@
                     some inputs to data which we already know the correct answer to. Afterwords we calculate a loss and then perform backwards
                     propagation on the whole neural network.
                 </p>
+
+                <p>
+                    Let's go through each step in back-propagation
+                </p>
+
+                <ol>
+                    <li>
+                        <h4>Loss</h4>
+                        <p>
+                            First we must calculate the total loss of the prediction. This can be done in many ways such as mean square error(MSE) or something
+                            as simple as subtracting the real value from the prediction. When handling loss across several predictions we often use MSE to get
+                            the total loss of all the predictions but when considering one prediction we can simply subtract the real value from the prediction
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Derivative of Activation Functions</h4>
+                        <p>
+                            The most complicated part of neural network lies hidden behind differential calculus but I'll do my best to explain it simply.
+                            In calculus there is the concept of a derivative which is the slope of a function at a single point. Typically slope is calculated
+                            by doing rise/run across two points on a line but with derivatives we can calculate the slope of a curved line at any given point.
+                            This is done by calculating the slope between the target point and another point that is infinitesimally far away from the other point.
+                            Essentially if we bring the second point so close to the first one then we can approximate a slope at that point, pretty cool if you're
+                            a nerd.
+                        </p>
+
+                        <p>
+                            But what do derivatives have to do with neural networks? Well many of our activation functions are non-linear meaning they don't have
+                            a consistent slope. This necessitates derivatives to find slopes. But why do we need the derivative, well let's go back to that game
+                            of telephone analogy. Let's say we have a kid named Henry who has below average hearing. This impairment causes him to change the word
+                            or phrase much more than others. Similarly in our neural networks, some layers will cause much more change in the input than others
+                            and thus we should treat them all a bit differently. If we have a high derivative then we change those weights more.
+                        </p>
+
+                        <p>
+                            I won't go too far into the details of derivatives as it isn't necessary to be able to calculate derivatives to make neural networks.
+                            Just know that to calculate the derivatives of the activation functions we throw the input from that node into the derivative formula.
+                        </p>
+
+                        <h4>Derivatives with respect to weights and biases</h4>
+                        <p>
+                            The whole point of backwards propagation is to calculate the adjustments necessary for the weights and biases to increase accuracy.
+                            To do this, we must work backwards through the network. Below I will the equations for getting the derivatives with respect to weights(dw)
+                            and with respect to biases(db).
+                        </p>
+
+                        <p>dw3 = loss * h'(x2) * x2</p>
+                        <p>dw2 = dw3 * g'(x1) * x1</p>
+                        <p>dw1 = dw2 * f'(input) * input</p>
+                        <br>
+                        <p>db3 = loss * h'(x2)</p>
+                        <p>db2 = db3 * g'(x1)</p>
+                        <p>db1 = db2 * f'(input)</p>
+                        <br>
+
+                        <p>
+                            loss calculated in previous step<br>
+                            f'(), g'(), h'() are the notation for the derivatives of each function -> f'(x) is the derivative of the function f(x)<br>
+                            input is the input at the first layer, x1 is the input for the second layer, and so on.
+                        </p>
+                    </li>
+                </ol>
             </li>
 
             
